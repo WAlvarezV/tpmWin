@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servicios/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServicioInventario" targetNamespace="http://servicios/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8282/MercaClick-war/ServicioInventario?xsd=1" namespace="http://servicios/" />
+    </xsd:schema>
+  </types>
+  <message name="anularProducto">
+    <part name="parameters" element="tns:anularProducto" />
+  </message>
+  <message name="anularProductoResponse">
+    <part name="parameters" element="tns:anularProductoResponse" />
+  </message>
+  <message name="listarProductos">
+    <part name="parameters" element="tns:listarProductos" />
+  </message>
+  <message name="listarProductosResponse">
+    <part name="parameters" element="tns:listarProductosResponse" />
+  </message>
+  <message name="crearProducto">
+    <part name="parameters" element="tns:crearProducto" />
+  </message>
+  <message name="crearProductoResponse">
+    <part name="parameters" element="tns:crearProductoResponse" />
+  </message>
+  <message name="editarTipoDato">
+    <part name="parameters" element="tns:editarTipoDato" />
+  </message>
+  <message name="editarTipoDatoResponse">
+    <part name="parameters" element="tns:editarTipoDatoResponse" />
+  </message>
+  <message name="buscarTipoDato">
+    <part name="parameters" element="tns:buscarTipoDato" />
+  </message>
+  <message name="buscarTipoDatoResponse">
+    <part name="parameters" element="tns:buscarTipoDatoResponse" />
+  </message>
+  <message name="anularTipoDato">
+    <part name="parameters" element="tns:anularTipoDato" />
+  </message>
+  <message name="anularTipoDatoResponse">
+    <part name="parameters" element="tns:anularTipoDatoResponse" />
+  </message>
+  <message name="listarTiposDato">
+    <part name="parameters" element="tns:listarTiposDato" />
+  </message>
+  <message name="listarTiposDatoResponse">
+    <part name="parameters" element="tns:listarTiposDatoResponse" />
+  </message>
+  <message name="editarProducto">
+    <part name="parameters" element="tns:editarProducto" />
+  </message>
+  <message name="editarProductoResponse">
+    <part name="parameters" element="tns:editarProductoResponse" />
+  </message>
+  <message name="buscarProducto">
+    <part name="parameters" element="tns:buscarProducto" />
+  </message>
+  <message name="buscarProductoResponse">
+    <part name="parameters" element="tns:buscarProductoResponse" />
+  </message>
+  <message name="listarTipoDato">
+    <part name="parameters" element="tns:listarTipoDato" />
+  </message>
+  <message name="listarTipoDatoResponse">
+    <part name="parameters" element="tns:listarTipoDatoResponse" />
+  </message>
+  <portType name="ServicioInventario">
+    <operation name="anularProducto">
+      <input wsam:Action="http://servicios/ServicioInventario/anularProductoRequest" message="tns:anularProducto" />
+      <output wsam:Action="http://servicios/ServicioInventario/anularProductoResponse" message="tns:anularProductoResponse" />
+    </operation>
+    <operation name="listarProductos">
+      <input wsam:Action="http://servicios/ServicioInventario/listarProductosRequest" message="tns:listarProductos" />
+      <output wsam:Action="http://servicios/ServicioInventario/listarProductosResponse" message="tns:listarProductosResponse" />
+    </operation>
+    <operation name="crearProducto">
+      <input wsam:Action="http://servicios/ServicioInventario/crearProductoRequest" message="tns:crearProducto" />
+      <output wsam:Action="http://servicios/ServicioInventario/crearProductoResponse" message="tns:crearProductoResponse" />
+    </operation>
+    <operation name="editarTipoDato">
+      <input wsam:Action="http://servicios/ServicioInventario/editarTipoDatoRequest" message="tns:editarTipoDato" />
+      <output wsam:Action="http://servicios/ServicioInventario/editarTipoDatoResponse" message="tns:editarTipoDatoResponse" />
+    </operation>
+    <operation name="buscarTipoDato">
+      <input wsam:Action="http://servicios/ServicioInventario/buscarTipoDatoRequest" message="tns:buscarTipoDato" />
+      <output wsam:Action="http://servicios/ServicioInventario/buscarTipoDatoResponse" message="tns:buscarTipoDatoResponse" />
+    </operation>
+    <operation name="anularTipoDato">
+      <input wsam:Action="http://servicios/ServicioInventario/anularTipoDatoRequest" message="tns:anularTipoDato" />
+      <output wsam:Action="http://servicios/ServicioInventario/anularTipoDatoResponse" message="tns:anularTipoDatoResponse" />
+    </operation>
+    <operation name="listarTiposDato">
+      <input wsam:Action="http://servicios/ServicioInventario/listarTiposDatoRequest" message="tns:listarTiposDato" />
+      <output wsam:Action="http://servicios/ServicioInventario/listarTiposDatoResponse" message="tns:listarTiposDatoResponse" />
+    </operation>
+    <operation name="editarProducto">
+      <input wsam:Action="http://servicios/ServicioInventario/editarProductoRequest" message="tns:editarProducto" />
+      <output wsam:Action="http://servicios/ServicioInventario/editarProductoResponse" message="tns:editarProductoResponse" />
+    </operation>
+    <operation name="buscarProducto">
+      <input wsam:Action="http://servicios/ServicioInventario/buscarProductoRequest" message="tns:buscarProducto" />
+      <output wsam:Action="http://servicios/ServicioInventario/buscarProductoResponse" message="tns:buscarProductoResponse" />
+    </operation>
+    <operation name="listarTipoDato">
+      <input wsam:Action="http://servicios/ServicioInventario/listarTipoDatoRequest" message="tns:listarTipoDato" />
+      <output wsam:Action="http://servicios/ServicioInventario/listarTipoDatoResponse" message="tns:listarTipoDatoResponse" />
+    </operation>
+  </portType>
+  <binding name="ServicioInventarioPortBinding" type="tns:ServicioInventario">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="anularProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editarTipoDato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarTipoDato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="anularTipoDato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTiposDato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTipoDato">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ServicioInventario">
+    <port name="ServicioInventarioPort" binding="tns:ServicioInventarioPortBinding">
+      <soap:address location="http://localhost:8282/MercaClick-war/ServicioInventario" />
+    </port>
+  </service>
+</definitions>

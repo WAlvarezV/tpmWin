@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://servicios/" targetNamespace="http://servicios/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="anularProducto" type="tns:anularProducto" />
+  <xs:element name="anularProductoResponse" type="tns:anularProductoResponse" />
+  <xs:element name="anularTipoDato" type="tns:anularTipoDato" />
+  <xs:element name="anularTipoDatoResponse" type="tns:anularTipoDatoResponse" />
+  <xs:element name="buscarProducto" type="tns:buscarProducto" />
+  <xs:element name="buscarProductoResponse" type="tns:buscarProductoResponse" />
+  <xs:element name="buscarTipoDato" type="tns:buscarTipoDato" />
+  <xs:element name="buscarTipoDatoResponse" type="tns:buscarTipoDatoResponse" />
+  <xs:element name="crearProducto" type="tns:crearProducto" />
+  <xs:element name="crearProductoResponse" type="tns:crearProductoResponse" />
+  <xs:element name="editarProducto" type="tns:editarProducto" />
+  <xs:element name="editarProductoResponse" type="tns:editarProductoResponse" />
+  <xs:element name="editarTipoDato" type="tns:editarTipoDato" />
+  <xs:element name="editarTipoDatoResponse" type="tns:editarTipoDatoResponse" />
+  <xs:element name="listarProductos" type="tns:listarProductos" />
+  <xs:element name="listarProductosResponse" type="tns:listarProductosResponse" />
+  <xs:element name="listarTipoDato" type="tns:listarTipoDato" />
+  <xs:element name="listarTipoDatoResponse" type="tns:listarTipoDatoResponse" />
+  <xs:element name="listarTiposDato" type="tns:listarTiposDato" />
+  <xs:element name="listarTiposDatoResponse" type="tns:listarTiposDatoResponse" />
+  <xs:complexType name="crearProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element name="ANULADO" type="xs:int" />
+      <xs:element name="CATEGORIA" type="xs:int" />
+      <xs:element minOccurs="0" name="CODIGO_BARRAS" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+      <xs:element name="ID_PRODUCTO" type="xs:int" />
+      <xs:element name="IMPUESTO" type="xs:double" />
+      <xs:element name="MARCA" type="xs:int" />
+      <xs:element minOccurs="0" name="MODELO" type="xs:string" />
+      <xs:element minOccurs="0" name="SERIAL" type="xs:string" />
+      <xs:element name="SUBCATEGORIA" type="xs:int" />
+      <xs:element name="VALOR" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crearProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarTipoDato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TipoDato" type="tns:tipoDato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoDato">
+    <xs:sequence>
+      <xs:element name="ANULADO" type="xs:int" />
+      <xs:element minOccurs="0" name="CODIGO" type="xs:string" />
+      <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+      <xs:element name="ID_TIPO_DATO" type="xs:int" />
+      <xs:element minOccurs="0" name="NOMBRE_TIPO" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarTipoDatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarTipoDato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TipoDato" type="tns:tipoDato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarTipoDatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tipoDato" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anularProducto">
+    <xs:sequence>
+      <xs:element name="idObj" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anularProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTiposDato">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTiposDatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProductos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarProductosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anularTipoDato">
+    <xs:sequence>
+      <xs:element name="idObj" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anularTipoDatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Producto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTipoDato">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="str" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTipoDatoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

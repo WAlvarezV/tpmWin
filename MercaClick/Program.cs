@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MercaClick.Inicio;
+using MercaClick.Inventario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,10 +15,11 @@ namespace MercaClick
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            InitialData iData = new InitialData();
+            Application.Run(new frmGestionProducto(iData));
         }
     }
 }
