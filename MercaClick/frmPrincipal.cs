@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MercaClick.Inventario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,21 @@ namespace MercaClick
         {
             InitializeComponent();
         }
+
+        private void smiGestiónProductos_Click(object sender, EventArgs e)
+        {
+            loadForm(new frmGestionProducto());
+        }
+
+        #region Métodos Propios
+
+        private void loadForm(Form unForm)
+        {
+            unForm.MdiParent = this;
+            unForm.WindowState = FormWindowState.Maximized;
+            unForm.BringToFront();
+            unForm.Show();
+        }
+        #endregion
     }
 }
